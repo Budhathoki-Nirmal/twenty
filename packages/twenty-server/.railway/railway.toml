@@ -1,0 +1,15 @@
+[build]
+# Optimize caching
+cacheDirs = [
+  ".yarn/cache",
+  ".yarn/install-state.gz",
+  ".yarn/unplugged",
+  "node_modules"
+]
+
+# Set working directory to the server package
+workdir = "packages/twenty-server"
+
+# Override install and start commands
+installCmd = "yarn workspaces focus twenty-server --production"
+startCmd = "yarn start"
