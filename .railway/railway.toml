@@ -1,15 +1,20 @@
 [build]
-# Optimize caching
+# Scope build to the server package only
+workdir = "packages/twenty-server"
+
+# Install only production dependencies for twenty-server
+installCmd = "yarn workspaces focus twenty-server --production"
+
+# Optionally compile TS (nx auto-build if needed)
+buildCmd = "npx nx build twenty-server"
+
+# Start the server
+startCmd = "npx nx start twenty-server"
+
+# Cache Yarn & node_modules for faster builds
 cacheDirs = [
   ".yarn/cache",
   ".yarn/install-state.gz",
   ".yarn/unplugged",
   "node_modules"
 ]
-
-# Set working directory to the server package
-workdir = "packages/twenty-server"
-
-# Override install and start commands
-installCmd = "yarn workspaces focus twenty-server --production"
-startCmd = "yarn start"
