@@ -46,3 +46,13 @@ dump.rdb
 .react-email/
 
 mcp.json
+
+.yarn/unplugged
+.yarn/cache/*.zip
+packages/twenty-e2e-testing
+packages/twenty-chrome-extension
+packages/twenty-website
+packages/twenty-emails
+.git
+.vscode
+node_modules
