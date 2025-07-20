@@ -46,5 +46,6 @@ register_background_jobs() {
 setup_and_migrate_db
 register_background_jobs
 
+
 # Continue with the original Docker command
 exec "$@"
