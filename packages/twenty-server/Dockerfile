@@ -11,7 +11,9 @@ WORKDIR /app
 COPY . .
 
 # Focus install only for twenty-server
-RUN yarn workspaces focus twenty-server --production
+#RUN yarn workspaces focus twenty-server --production
+RUN npm i -g corepack && corepack enable && corepack prepare yarn@4.0.0 --activate
+
 
 # Build the app
 RUN yarn build
