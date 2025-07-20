@@ -3,14 +3,3 @@
 node_modules
 .nx/cache
 packages/twenty-server/.env
-
-node_modules
-.yarn/cache/*.zip
-.yarn/unplugged
-.git
-.vscode
-tools
-packages/twenty-e2e-testing
-packages/twenty-chrome-extension
-packages/twenty-emails
-packages/twenty-website
